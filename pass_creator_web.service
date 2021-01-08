@@ -1,0 +1,14 @@
+[Unit]
+Description=Pass creator web server for creating fake train passes
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u server.py
+WorkingDirectory=/home/pi/Documents/Projects/pass_creator
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
