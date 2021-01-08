@@ -92,10 +92,10 @@ def OUI_PASS(FROM, TO, DEPART, ARRIVEE, NOM, PRENOM, NUM_TRAIN, dest):
     passfile.addFile("logo.png", open("images/logo-oui.png", "rb"))
 
     # Create and output the Passbook file (.pkpass)
-    password = open(expanduser("~") + "/passcreatorpwd.txt").read()
+    password = open(expanduser("~") + "/pass_creator/passcreatorpwd.txt").read()
     return passfile.create(
         "certs/certificate.pem",
-        "certs/private.key",
+        expanduser("~") + "/pass_creator/private.key",
         "certs/wwdr.pem",
         password,
         "passes/" + dest + ".pkpass",
