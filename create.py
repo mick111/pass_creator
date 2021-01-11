@@ -11,8 +11,8 @@ form = cgi.FieldStorage()
 
 FROM = (form.getvalue("ville-depart").upper(), form.getvalue("depart").upper())
 TO = (form.getvalue("ville-arrivee").upper(), form.getvalue("arrivee").upper())
-DEPART = form.getvalue("date") + 'T' + form.getvalue("heure-depart") + '+02:00'
-ARRIVEE = form.getvalue("date") + 'T' + form.getvalue("heure-arrivee") + '+02:00'
+DEPART = form.getvalue("date") + 'T' + form.getvalue("heure-depart") + '+01:00'
+ARRIVEE = form.getvalue("date") + 'T' + form.getvalue("heure-arrivee") + '+01:00'
 NOM = form.getvalue("nom").upper()
 PRENOM = form.getvalue("prenom").upper()
 NUM_TRAIN = form.getvalue("num_train")

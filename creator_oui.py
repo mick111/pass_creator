@@ -62,7 +62,7 @@ def OUI_PASS(FROM, TO, DEPART, ARRIVEE, NOM, PRENOM, NUM_TRAIN, dest):
         Field("app", "http://bit.ly/appli_ouisncf", "Application OUI.sncf")
     )
 
-    organizationName = "OUIOUI"
+    organizationName = "OUI.sncf"
     passTypeIdentifier = "pass.com.sear.app"
     teamIdentifier = "836469M6XW"
 
