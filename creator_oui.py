@@ -74,7 +74,7 @@ def OUI_PASS(FROM, TO, DEPART, ARRIVEE, NOM, PRENOM, NUM_TRAIN, dest):
     )
     passfile.serialNumber = "AZERTYUIOP"
     passfile.barcode = Barcode(
-        message="Doudou slut slutDoudou slut slutDoudou slut slutDoudou slut slutDoudou slut slutDoudou slut slutDoudou slut slutDoudou slut slut   !!",
+        message="Doudou slut slut, Doudou slut slut, Doudou slut slut, Doudou slut slut, Doudou slut slut, Doudou slut slut, Doudou slut slut, Doudou slut slut !!",
         format=BarcodeFormat.AZTEC,
     )
 
@@ -84,7 +84,7 @@ def OUI_PASS(FROM, TO, DEPART, ARRIVEE, NOM, PRENOM, NUM_TRAIN, dest):
 
     passfile.description = "OUI PASS"
 
-    passfile.relevantDate = ARRIVEE
+    passfile.relevantDate = DEPART
 
     # Including the icon and logo is necessary for the passbook to be valid.
     passfile.addFile("icon.png", open("images/logo-oui.png", "rb"))
