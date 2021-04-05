@@ -22,7 +22,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     cardInfo.headerFields.append(field)
 
     field = Field("fli", FLIGHT, "Flight")
-    field.textAlignment = Alignment.NATURAL
+    field.textAlignment = Alignment.CENTER
     cardInfo.headerFields.append(field)
 
     cardInfo.primaryFields.append(Field("src", FROM[0], FROM[1]))
