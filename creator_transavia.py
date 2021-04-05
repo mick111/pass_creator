@@ -105,7 +105,7 @@ If you are only traveling with hand luggage, you can go straight to security and
         Field("mor", "On the <a href='https://www.transavia.com/en-EU/service'>website of Transavia</a> you will find all the information to prepare for your trip.", "More information")
     )
 
-    organizationName = "Transavia.sncf"
+    organizationName = "Transavia"
     passTypeIdentifier = "pass.com.sear.app"
     teamIdentifier = "836469M6XW"
 
@@ -115,9 +115,9 @@ If you are only traveling with hand luggage, you can go straight to security and
         organizationName=organizationName,
         teamIdentifier=teamIdentifier,
     )
-    passfile.serialNumber = "AZERTYUIOP"
+    passfile.serialNumber = "AZERTYUIOT"
     passfile.barcode = Barcode(
-        message="Doudou slut slutDoudou slut slutDoudou slut slutDoudou slut slutDoudou slut slutDoudou slut slutDoudou slut slutDoudou slut slut   !!",
+        message=f"M1{NOM_PRENOM.replace(' ','/').upper()}       U7EDGF {FROM[0]}{TO[0]}{FLIGHT} 093Y009D0080 147>1181WW1092BTO 0000000000000299790000000000 0                          ",
         format=BarcodeFormat.QR,
         altText="seq. nr. " + FLIGHT + ":80"
     )
