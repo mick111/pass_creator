@@ -18,7 +18,7 @@ import datetime
 def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, SEAT, ZONE):
     cardInfo = BoardingPass(transitType=TransitType.AIR)
     field = Field("date", EMBARQUEMENT.strftime("%d %b"), "Date")
-    #field.textAlignment = Alignment.RIGHT
+    field.textAlignment = Alignment.NATURAL
     cardInfo.headerFields.append(field)
 
     field = Field("fli", FLIGHT, "Flight")
@@ -27,7 +27,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
 
     cardInfo.primaryFields.append(Field("src", FROM[0], FROM[1]))
     field = Field("dst", TO[0], TO[1])
-    #field.textAlignment = Alignment.RIGHT
+    field.textAlignment = Alignment.RIGHT
     cardInfo.primaryFields.append(field)
 
     cardInfo.auxiliaryFields.append(
