@@ -18,16 +18,16 @@ import datetime
 def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, SEAT, ZONE):
     cardInfo = BoardingPass(transitType=TransitType.AIR)
     field = Field("date", EMBARQUEMENT.strftime("%d %b"), "Date")
-    field.textAlignment = Alignment.RIGHT
+    #field.textAlignment = Alignment.RIGHT
     cardInfo.headerFields.append(field)
 
     field = Field("fli", FLIGHT, "Flight")
-    field.textAlignment = Alignment.RIGHT
+    #field.textAlignment = Alignment.RIGHT
     cardInfo.headerFields.append(field)
 
     cardInfo.primaryFields.append(Field("src", FROM[0], FROM[1]))
     field = Field("dst", TO[0], TO[1])
-    field.textAlignment = Alignment.RIGHT
+    #field.textAlignment = Alignment.RIGHT
     cardInfo.primaryFields.append(field)
 
     cardInfo.auxiliaryFields.append(
@@ -35,15 +35,15 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     )
 
     field = Field("ter", TERMINAL, "Terminal")
-    field.textAlignment = Alignment.RIGHT
+    #field.textAlignment = Alignment.RIGHT
     cardInfo.auxiliaryFields.append(field)
 
     field = Field("sea", SEAT, "Seat")
-    field.textAlignment = Alignment.RIGHT
+    #field.textAlignment = Alignment.RIGHT
     cardInfo.auxiliaryFields.append(field)
 
     field = Field("zon", ZONE, "Zone")
-    field.textAlignment = Alignment.RIGHT
+    #field.textAlignment = Alignment.RIGHT
     cardInfo.auxiliaryFields.append(field)
 
     field = DateField(
@@ -62,7 +62,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
         dateStyle=DateStyle.NONE,
         timeStyle=DateStyle.SHORT,
     )
-    field.textAlignment = Alignment.RIGHT
+    #field.textAlignment = Alignment.RIGHT
     cardInfo.secondaryFields.append(field)
 
     field = DateField(
@@ -72,7 +72,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
         dateStyle=DateStyle.NONE,
         timeStyle=DateStyle.SHORT,
     )
-    field.textAlignment = Alignment.RIGHT
+    #field.textAlignment = Alignment.RIGHT
     cardInfo.secondaryFields.append(field)
 
     cardInfo.backFields.append(
