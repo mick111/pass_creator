@@ -27,7 +27,7 @@ if PASS_TYPE == "OUI":
 elif PASS_TYPE == "TRANSAVIA":
     FROM = (form.getvalue("depart_code").upper(), form.getvalue("depart"))
     TO = (form.getvalue("arrivee_code").upper(), form.getvalue("arrivee"))
-    EMBARQUEMENT = datetime.datetime.fromisoformat(form.getvalue("date") + 'T' + form.getvalue("heure_embarquement"), '%Y-%m-%dT%H:%M')
+    EMBARQUEMENT = datetime.datetime.fromisoformat(form.getvalue("date") + 'T' + form.getvalue("heure_embarquement"))
     NOM_PRENOM = form.getvalue("nom") + ' ' + form.getvalue("prenom")
     TERMINAL = form.getvalue("terminal")
     FLIGHT = form.getvalue("num_vol")
