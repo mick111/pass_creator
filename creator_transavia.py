@@ -30,8 +30,6 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     field.textAlignment = Alignment.RIGHT
     cardInfo.primaryFields.append(field)
 
-    cardInfo.secondaryFields.append(field)
-
     cardInfo.auxiliaryFields.append(
         Field("nam", NOM_PRENOM, "Passenger")
     )
@@ -55,6 +53,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
         dateStyle=DateStyle.NONE,
         timeStyle=DateStyle.SHORT,
     )
+    cardInfo.secondaryFields.append(field)
 
     field = DateField(
         "gat",
