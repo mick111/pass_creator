@@ -13,10 +13,11 @@ from passbook.models import (
     Alignment,
 )
 from os.path import expanduser
+import datetime
 
 def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, SEAT, ZONE):
     cardInfo = BoardingPass(transitType=TransitType.AIR)
-    field = Field("date", "03 Apr", "Date")
+    field = Field("date", EMBARQUEMENT.strftime("%d %b"), "Date")
     field.textAlignment = Alignment.RIGHT
     cardInfo.headerFields.append(field)
 
@@ -29,13 +30,6 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     field.textAlignment = Alignment.RIGHT
     cardInfo.primaryFields.append(field)
 
-    field = DateField(
-        "boa",
-        EMBARQUEMENT,
-        "Boarding",
-        dateStyle=DateStyle.NONE,
-        timeStyle=DateStyle.SHORT,
-    )
     cardInfo.secondaryFields.append(field)
 
     cardInfo.auxiliaryFields.append(
@@ -55,8 +49,16 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     cardInfo.auxiliaryFields.append(field)
 
     field = DateField(
+        "boa",
+        EMBARQUEMENT.isoformat(),
+        "Boarding",
+        dateStyle=DateStyle.NONE,
+        timeStyle=DateStyle.SHORT,
+    )
+
+    field = DateField(
         "gat",
-        EMBARQUEMENT,
+        EMBARQUEMENT.isoformat(),
         "Gate closed",
         dateStyle=DateStyle.NONE,
         timeStyle=DateStyle.SHORT,
@@ -66,7 +68,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
 
     field = DateField(
         "dep",
-        EMBARQUEMENT,
+        EMBARQUEMENT.isoformat(),
         "Departure",
         dateStyle=DateStyle.NONE,
         timeStyle=DateStyle.SHORT,
@@ -127,7 +129,7 @@ If you are only traveling with hand luggage, you can go straight to security and
 
     passfile.description = "Transavia"
 
-    passfile.relevantDate = EMBARQUEMENT
+    passfile.relevantDate = EMBARQUEMENT.isoformat()
 
     # Including the icon and logo is necessary for the passbook to be valid.
     passfile.addFile("icon.png", open("images/logo-transavia.png", "rb"))
@@ -148,11 +150,12 @@ If you are only traveling with hand luggage, you can go straight to security and
 if __name__ == "__main__":
     TO = ("ORY", "Paris-Orly")
     FROM = ("ACE", "Arrecife (Lanzarote)")
-    EMBARQUEMENT = "2020-01-07T23:00+02:00"
+    EMBARQUEMENT = datetime.datetime.fromisoformat("2021-10-10T22:51+02:00")
     NOM_PRENOM = "Arnaud Maillet"
     TERMINAL = "1"
     SEAT = "9D"
     ZONE = "2"
     FLIGHT = "TO3151"
     FICHIER = "toto"
+    print(EMBARQUEMENT.isoformat())
     TRANSAVIA_PASS(FICHIER, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, SEAT, ZONE)

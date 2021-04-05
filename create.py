@@ -5,6 +5,7 @@
 from creator_transavia import TRANSAVIA_PASS
 from creator_oui import OUI_PASS
 import time
+import datetime
 
 import cgi
 form = cgi.FieldStorage()
@@ -14,8 +15,8 @@ PASS_TYPE = form.getvalue("pass_type")
 if PASS_TYPE == "OUI":
     FROM = (form.getvalue("ville-depart").upper(), form.getvalue("depart").upper())
     TO = (form.getvalue("ville-arrivee").upper(), form.getvalue("arrivee").upper())
-    DEPART = form.getvalue("date") + 'T' + form.getvalue("heure-depart") + '+01:00'
-    ARRIVEE = form.getvalue("date") + 'T' + form.getvalue("heure-arrivee") + '+01:00'
+    DEPART = form.getvalue("date") + 'T' + form.getvalue("heure-depart") + '+02:00'
+    ARRIVEE = form.getvalue("date") + 'T' + form.getvalue("heure-arrivee") + '+02:00'
     NOM = form.getvalue("nom").upper()
     PRENOM = form.getvalue("prenom").upper()
     NUM_TRAIN = form.getvalue("num_train")
@@ -26,8 +27,8 @@ if PASS_TYPE == "OUI":
 elif PASS_TYPE == "TRANSAVIA":
     FROM = (form.getvalue("depart_code").upper(), form.getvalue("depart"))
     TO = (form.getvalue("arrivee_code").upper(), form.getvalue("arrivee"))
-    EMBARQUEMENT = form.getvalue("date") + 'T' + form.getvalue("heure_embarquement") + '+01:00'
-    NOM_PRENOM = form.getvalue("nom") + ' ' + form.getvalue("prenom").upper()
+    EMBARQUEMENT = datetime.datetime.fromisoformat(form.getvalue("date") + 'T' + form.getvalue("heure_embarquement"), '%Y-%m-%dT%H:%M')
+    NOM_PRENOM = form.getvalue("nom") + ' ' + form.getvalue("prenom")
     TERMINAL = form.getvalue("terminal")
     FLIGHT = form.getvalue("num_vol")
     SEAT = form.getvalue("num_siege")
