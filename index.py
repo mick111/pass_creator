@@ -52,8 +52,49 @@ html = f"""<!DOCTYPE html>
         </tr>
         <tr><td colspan="2" style="text-align:center;"><input style="margin-top: 5px !important;" style="margin:auto;" type="image" src="/img/Add_to_Apple_Wallet_rgb_FR.svg" alt="Submit Form"></td></tr>
     </tbody>
-    </form>
     </table>
+    <input required type="text" id="pass_type" name="pass_type" value="OUI"></td>
+    </form>
+
+    <form action="/create.py" method="post">
+    <table>
+    <tbody>
+        <tr>
+            <td><label for="depart">Aéroport de départ</label></td><td><input required type="text" id="depart" name="depart" value="Arrecife (Lanzarote)"></td>
+        </tr>
+        <tr>
+            <td><label for="depart_code">Code Aéroport de départ</label></td><td><input required type="text" id="depart_code" name="depart_code" value="ACE"></td>
+        </tr>
+        <tr>
+            <td><label for="arrivee">Aéroport d'arrivée</label></td><td><input required type="text" id="arrivee" name="arrivee" value="Paris-Orly"></td>
+        </tr>
+        <tr>
+            <td><label for="arrivee_code">Code Aéroport d'arrivée</label></td><td><input required type="text" id="arrivee_code" name="arrivee_code" value="ORY"></td>
+        </tr>
+
+        <tr>
+            <td><label for="date">Date de voyage</label></td><td><input required type="date" id="date" name="date" value={before.strftime("%Y-%m-%d")}></td>
+        </tr>
+        <tr>
+            <td><label for="heure_embarquement">Heure d'embarquement</label></td><td><input required type="time" id="heure_embarquement" name="heure_embarquement" value={before.strftime("%H:%M")}></td>
+        </tr>
+
+        <tr>
+            <td><label for="num_vol">Numéro de vol</label></td><td><input required type="text" id="num_vol" name="num_vol" value="TO3151"></td>
+        </tr>
+
+        <tr>
+            <td><label for="num_siege">Numéro de siège</label></td><td><input required type="text" id="num_siege" name="num_siege" value="9D"></td>
+        </tr>
+        <tr>
+            <td><label for="zone">Zone</label></td><td><input required type="text" id="zone" name="zone" value="2"></td>
+        </tr>
+
+        <tr><td colspan="2" style="text-align:center;"><input style="margin-top: 5px !important;" style="margin:auto;" type="image" src="/img/Add_to_Apple_Wallet_rgb_FR.svg" alt="Submit Form"></td></tr>
+    </tbody>
+    </table>
+    <input required type="text" id="pass_type" name="pass_type" value="TRANSAVIA"></td>
+    </form>
 </body>
 </html>
 """
