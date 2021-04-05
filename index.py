@@ -86,6 +86,10 @@ html = f"""<!DOCTYPE html>
         </tr>
 
         <tr>
+            <td><label for="terminal">Terminal</label></td><td><input required type="text" id="terminal" name="terminal" value="1"></td>
+        </tr>
+
+        <tr>
             <td><label for="num_vol">Numéro de vol</label></td><td><input required type="text" id="num_vol" name="num_vol" value="TO3151"></td>
         </tr>
 
