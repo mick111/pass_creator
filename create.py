@@ -24,14 +24,23 @@ if PASS_TYPE == "OUI":
     OUI_PASS(FROM, TO, DEPART, ARRIVEE, NOM, PRENOM, NUM_TRAIN, FICHIER)
 
 elif PASS_TYPE == "TRANSAVIA":
-    FROM = (form.getvalue("depart"), form.getvalue("depart_code").upper())
-    TO = (form.getvalue("arrivee"), form.getvalue("arrivee_code").upper())
+    FROM = (form.getvalue("depart_code").upper(), form.getvalue("depart"))
+    TO = (form.getvalue("arrivee_code").upper(), form.getvalue("arrivee"))
     EMBARQUEMENT = form.getvalue("date") + 'T' + form.getvalue("heure_embarquement") + '+01:00'
     NOM_PRENOM = form.getvalue("nom") + ' ' + form.getvalue("prenom").upper()
-    TERMINAL = form.getvalue("num_train")
+    TERMINAL = form.getvalue("terminal")
     FLIGHT = form.getvalue("num_vol")
     SEAT = form.getvalue("num_siege")
     ZONE = form.getvalue("zone")
+
+    TO = ("ORY", "Paris-Orly")
+    FROM = ("ACE", "Arrecife (Lanzarote)")
+    EMBARQUEMENT = "2020-01-07T23:00+02:00"
+    NOM_PRENOM = "Arnaud Maillet"
+    TERMINAL = "1"
+    SEAT = "9D"
+    ZONE = "2"
+    FLIGHT = "TO3151"
 
     FICHIER = 'TRANSAVIA_PASS'+str(time.time())
     TRANSAVIA_PASS(FICHIER, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, SEAT, ZONE)
