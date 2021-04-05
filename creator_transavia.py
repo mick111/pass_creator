@@ -58,7 +58,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
 
     field = DateField(
         "gat",
-        EMBARQUEMENT.isoformat(),
+        (EMBARQUEMENT + datetime.timedelta(minutes=15)).isoformat(),
         "Gate closed",
         dateStyle=DateStyle.NONE,
         timeStyle=DateStyle.SHORT,
@@ -68,7 +68,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
 
     field = DateField(
         "dep",
-        EMBARQUEMENT.isoformat(),
+        (EMBARQUEMENT + datetime.timedelta(minutes=30)).isoformat(),
         "Departure",
         dateStyle=DateStyle.NONE,
         timeStyle=DateStyle.SHORT,
