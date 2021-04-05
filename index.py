@@ -20,7 +20,7 @@ html = f"""<!DOCTYPE html>
     <form action="/create.py" method="post">
     <table class="oui">
     <tbody>
-        <tr><td colspan="2" style="text-align:center;"><img style="margin-top: 5px !important;" style="margin:auto;" src="/images/logo-oui.png"></td></tr>
+        <tr><td colspan="2" style="text-align:center;"><img style="height: 30px;" src="/images/logo-oui.png"></td></tr>
         <tr>
             <td><label for="prenom">Prénom</label></td><td><input required type="text" id="prenom" name="prenom"></td>
         </tr>
@@ -60,7 +60,7 @@ html = f"""<!DOCTYPE html>
     <form action="/create.py" method="post">
     <table class="transavia">
     <tbody>
-        <tr><td colspan="2" style="text-align:center;"><img style="margin-top: 5px !important;" style="margin:auto;" src="/images/logo-transavia.png"></td></tr>
+        <tr><td colspan="2" style="text-align:center;"><img style="height: 30px;" src="/images/logo-transavia.png"></td></tr>
         <tr>
             <td><label for="prenom">Prénom</label></td><td><input required type="text" id="prenom" name="prenom"></td>
         </tr>
