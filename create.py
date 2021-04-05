@@ -31,13 +31,7 @@ elif PASS_TYPE == "TRANSAVIA":
     TERMINAL = form.getvalue("terminal")
     FLIGHT = form.getvalue("num_vol")
     SEAT = form.getvalue("num_siege")
-
-    TO = ("ORY", "Paris-Orly")
-    FROM = ("ACE", "Arrecife (Lanzarote)")
-    EMBARQUEMENT = "2020-01-07T23:00+02:00"
-    NOM_PRENOM = "Arnaud Maillet"
-    TERMINAL = "1"
-    ZONE = "2"
+    ZONE = form.getvalue("zone")
 
     FICHIER = 'TRANSAVIA_PASS'+str(time.time())
     TRANSAVIA_PASS(FICHIER, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, SEAT, ZONE)
