@@ -18,7 +18,7 @@ html = f"""<!DOCTYPE html>
 </head>
 <body>
     <form action="/create.py" method="post">
-    <table>
+    <table class="oui">
     <tbody>
         <tr>
             <td><label for="prenom">Prénom</label></td><td><input required type="text" id="prenom" name="prenom"></td>
@@ -57,7 +57,7 @@ html = f"""<!DOCTYPE html>
     </form>
     <br />
     <form action="/create.py" method="post">
-    <table>
+    <table class="transavia">
     <tbody>
         <tr>
             <td><label for="prenom">Prénom</label></td><td><input required type="text" id="prenom" name="prenom"></td>
