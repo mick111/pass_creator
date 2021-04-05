@@ -122,7 +122,7 @@ If you are only traveling with hand luggage, you can go straight to security and
         altText="seq. nr. " + FLIGHT + ":80"
     )
 
-    passfile.labelColor = "rgb(26, 209, 89 )"
+    passfile.labelColor = "rgb(26, 209, 89)"
     passfile.foregroundColor = "rgb(96, 96, 96)"
     passfile.backgroundColor = "rgb(255, 255, 255)"
 

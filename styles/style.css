@@ -10,3 +10,11 @@ table {
  border-style: solid;
  border-radius: 10px;
 }
+
+table.transavia {
+ background-color: rgb(26, 209, 89);
+}
+
+table.oui {
+ background-color: rgb(120, 114, 100);
+}

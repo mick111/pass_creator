@@ -55,7 +55,7 @@ html = f"""<!DOCTYPE html>
     </table>
     <input hidden type="text" id="pass_type" name="pass_type" value="OUI"></td>
     </form>
-
+    <br />
     <form action="/create.py" method="post">
     <table>
     <tbody>
