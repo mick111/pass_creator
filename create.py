@@ -49,6 +49,7 @@ html = f"""<!DOCTYPE html>
 </head>
 <body>
   <a href="/passes/{FICHIER}.pkpass" style="display: block;text-align: center;"><img src="/img/Add_to_Apple_Wallet_rgb_FR.svg"/></a>
+  {EMBARQUEMENT.isoformat()}
 </body>
 </html>
 """
