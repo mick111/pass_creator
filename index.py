@@ -53,7 +53,7 @@ html = f"""<!DOCTYPE html>
         <tr><td colspan="2" style="text-align:center;"><input style="margin-top: 5px !important;" style="margin:auto;" type="image" src="/img/Add_to_Apple_Wallet_rgb_FR.svg" alt="Submit Form"></td></tr>
     </tbody>
     </table>
-    <input required type="text" id="pass_type" name="pass_type" value="OUI"></td>
+    <input hidden type="text" id="pass_type" name="pass_type" value="OUI"></td>
     </form>
 
     <form action="/create.py" method="post">
@@ -93,7 +93,7 @@ html = f"""<!DOCTYPE html>
         <tr><td colspan="2" style="text-align:center;"><input style="margin-top: 5px !important;" style="margin:auto;" type="image" src="/img/Add_to_Apple_Wallet_rgb_FR.svg" alt="Submit Form"></td></tr>
     </tbody>
     </table>
-    <input required type="text" id="pass_type" name="pass_type" value="TRANSAVIA"></td>
+    <input hidden type="text" id="pass_type" name="pass_type" value="TRANSAVIA"></td>
     </form>
 </body>
 </html>
