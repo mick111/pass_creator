@@ -60,6 +60,12 @@ html = f"""<!DOCTYPE html>
     <table>
     <tbody>
         <tr>
+            <td><label for="prenom">Prénom</label></td><td><input required type="text" id="prenom" name="prenom"></td>
+        </tr>
+        <tr>
+            <td><label for="nom">Nom</label></td><td><input required type="text" id="nom" name="nom"></td>
+        </tr>
+        <tr>
             <td><label for="depart">Aéroport de départ</label></td><td><input required type="text" id="depart" name="depart" value="Arrecife (Lanzarote)"></td>
         </tr>
         <tr>
