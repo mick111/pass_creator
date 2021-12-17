@@ -77,6 +77,12 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
 
     cardInfo.backFields.append(
         Field(
+            "acs",
+            """Le terminal de l'aérodrome The Game se situe au <a href="https://maps.apple.com/?address=6%20Rue%20de%20la%20Harpe,%2075005%20Paris,%20France&auid=14148564957634573501&ll=48.852927,2.344476&lsp=9902&q=The%20Game&_ext=CisKBAgEEHoKBAgFEAMKBQgGEN8BCgQIChAACgQIUhACCgQIVRAOCgQIWRABEiYpd44S9plsSEAx0ZAjdJmzAkA59WM4UsBtSEBBo+RINY/PAkBQBA%3D%3D&t=r">6 rue de la Harpe 75005 Paris</a>"""
+            "Accès au terminal"))
+
+    cardInfo.backFields.append(
+        Field(
             "svc",
             """TheGame Airlines vous propose toute une gamme de rafraîchissements dès votre arrivée dans notre terminal d'embarquement. Jus d'orange, thé glacé et café... à volonté pour votre plus grand confort. Retrouvez également notre Magazine pour faire passer le temps durant votre vol...""", 
             "Nos services à bord",
