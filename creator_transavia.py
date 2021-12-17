@@ -85,6 +85,9 @@ Et sous nos masques gardons le sourire !""", "Covid 19 - Mesures Sanitaires")
     cardInfo.backFields.append(
         Field("pas", """En plus de ces mesures, la présentation du Pass Sanitaire est obligatoire pour les joueurs de 12 ans et plus. Nous vous invitons à privilégier ce pass sous format numérique via l'application Tous Anti Covid afin d'éviter tout problème à la lecture du QR code. Retrouvez toutes nos informations sur ce pass en suivant <a href="http://9ogu.mjt.lu/lnk/CAAAAmTDWgQAAAAAAAAAAR4qWN8AALQJix0AAAAAAAwbTwBhvFGqf8uNRHzDQLe3vSX6eKsIYwAMJnY/3/zcOSDpgl2hZ2FQRqCtiyFQ/aHR0cHM6Ly93d3cudGhlZ2FtZS1mcmFuY2UuY29tL2ZyL2NvdmlkLTE5Lmh0bQ">ce lien</a>""", "Covid 19 - Mesures Sanitaires")
     )
+
+    cardInfo.backFields.append(
+        Field("vid", """Une vidéo d'instructions est consultable ici <a href="http://9ogu.mjt.lu/lnk/EAAAAiBEcpQAAAAAAAAAAR4qWN8AALQJix0AAAAAAAwbTwBhSs829ezekZWBSeO6pIQnHHNxRAAMJnY/2/nkoaOE6dKkZG6NAj65d89g/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj0yRXVCaHR6TVFMVQ">ici</a>""", "Présentation"))
     organizationName = "The Game"
     passTypeIdentifier = "pass.com.sear.app"
     teamIdentifier = "836469M6XW"
