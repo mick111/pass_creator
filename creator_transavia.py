@@ -106,11 +106,11 @@ Et sous nos masques gardons le sourire !""", "Covid 19 - Mesures Sanitaires")
         altText="seq. nr. " + FLIGHT + ":80"
     )
 
-    passfile.labelColor = "rgb(26, 209, 89)"
+    passfile.labelColor = "rgb(37, 150, 190)"
     passfile.foregroundColor = "rgb(96, 96, 96)"
     passfile.backgroundColor = "rgb(255, 255, 255)"
 
-    passfile.description = "Transavia boardingpass"
+    passfile.description = "The Game boardingpass"
 
     passfile.relevantDate = EMBARQUEMENT.isoformat()
 
