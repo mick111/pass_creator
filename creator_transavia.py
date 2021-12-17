@@ -77,35 +77,19 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
 
     cardInfo.backFields.append(
         Field(
-            "hnd",
-            """You are permitted 1 piece of hand luggage per adult/child of max. 10 kg.
-You can choose from:
-1 piece of hand luggage of max. 45x40x25 cm. Guaranteed to be allowed into the cabin.
-or
-1 piece of hand luggage of max. 55x40x25 cm. Keep in mind that it will be transported as hold luggage on crowded flights.
-If you are only traveling with hand luggage, you can go straight to security and onto your gate.
-
-<a href="https://www.transavia.com/en-NL/faq/hand-luggage/">More information about hand luggage</a>
-""", 
-            "Hand luggage",
+            "svc",
+            """TheGame Airlines vous propose toute une gamme de rafraîchissements dès votre arrivée dans notre terminal d'embarquement. Jus d'orange, thé glacé et café... à volonté pour votre plus grand confort. Retrouvez également notre Magazine pour faire passer le temps durant votre vol...""", 
+            "Nos services à bord",
         )
     )
     cardInfo.backFields.append(
-        Field(
-            "dro",
-            "Are you travelling with hold luggage or special luggage? You can drop it off at the 'baggage drop-off' counters. If there is no drop-off counter, you can check in your bags at the check-in desk.",
-            "Dropping off luggage at the airport",
-        )
+        Field("mor", """Nous avons mis en place une <a href="http://9ogu.mjt.lu/lnk/CAAAAmTDWgQAAAAAAAAAAR4qWN8AALQJix0AAAAAAAwbTwBhvFGqf8uNRHzDQLe3vSX6eKsIYwAMJnY/2/qpmowiQheKKUSDKKZU5IHA/aHR0cHM6Ly93d3cudGhlZ2FtZS1mcmFuY2UuY29tL2ZyL2NvdmlkLTE5Lmh0bQ">série de mesures</a> que nous jugeons essentielles, ce qui ne vous empêchera pas de vivre un moment fun et convivial !
+Et sous nos masques gardons le sourire !""", "Covid 19 - Mesures Sanitaires")
     )
     cardInfo.backFields.append(
-        Field("ont", "Make sure you arrive at the airport well ahead of time (at least 2 hours before departure). This way, you can start your trip without any stress and make sure we can depart on time.", "Go to the airport on time")
+        Field("pas", """En plus de ces mesures, la présentation du Pass Sanitaire est obligatoire pour les joueurs de 12 ans et plus. Nous vous invitons à privilégier ce pass sous format numérique via l'application Tous Anti Covid afin d'éviter tout problème à la lecture du QR code. Retrouvez toutes nos informations sur ce pass en suivant <a href="http://9ogu.mjt.lu/lnk/CAAAAmTDWgQAAAAAAAAAAR4qWN8AALQJix0AAAAAAAwbTwBhvFGqf8uNRHzDQLe3vSX6eKsIYwAMJnY/3/zcOSDpgl2hZ2FQRqCtiyFQ/aHR0cHM6Ly93d3cudGhlZ2FtZS1mcmFuY2UuY29tL2ZyL2NvdmlkLTE5Lmh0bQ">""", "Covid 19 - Mesures Sanitaires")
     )
-
-    cardInfo.backFields.append(
-        Field("mor", "On the <a href='https://www.transavia.com/en-EU/service'>website of Transavia</a> you will find all the information to prepare for your trip.", "More information")
-    )
-
-    organizationName = "Transavia"
+    organizationName = "The Game"
     passTypeIdentifier = "pass.com.sear.app"
     teamIdentifier = "836469M6XW"
 
@@ -115,7 +99,7 @@ If you are only traveling with hand luggage, you can go straight to security and
         organizationName=organizationName,
         teamIdentifier=teamIdentifier,
     )
-    passfile.serialNumber = "AZERTYUIOT"
+    passfile.serialNumber = "AZERTYUIPT"
     passfile.barcode = Barcode(
         message=f"M1{NOM_PRENOM.replace(' ','/').upper()}       U7EDGF {FROM[0]}{TO[0]}{FLIGHT} 093Y009D0080 147>1181WW1092BTO 0000000000000299790000000000 0                          ",
         format=BarcodeFormat.QR,
@@ -131,9 +115,9 @@ If you are only traveling with hand luggage, you can go straight to security and
     passfile.relevantDate = EMBARQUEMENT.isoformat()
 
     # Including the icon and logo is necessary for the passbook to be valid.
-    passfile.addFile("icon.png", open("images/logo-transavia.png", "rb"))
-    passfile.addFile("logo@2x.png", open("images/logo-transavia@2x.png", "rb"))
-    passfile.addFile("logo.png", open("images/logo-transavia.png", "rb"))
+    passfile.addFile("icon.png", open("images/vh2tz.png", "rb"))
+    passfile.addFile("logo@2x.png", open("images/vh2tz.png", "rb"))
+    passfile.addFile("logo.png", open("images/vh2tz.png", "rb"))
 
     # Create and output the Passbook file (.pkpass)
     password = open(expanduser("~") + "/pass_creator/passcreatorpwd.txt").read()
