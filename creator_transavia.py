@@ -83,7 +83,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
 Et sous nos masques gardons le sourire !""", "Covid 19 - Mesures Sanitaires")
     )
     cardInfo.backFields.append(
-        Field("pas", """En plus de ces mesures, la présentation du Pass Sanitaire est obligatoire pour les joueurs de 12 ans et plus. Nous vous invitons à privilégier ce pass sous format numérique via l'application Tous Anti Covid afin d'éviter tout problème à la lecture du QR code. Retrouvez toutes nos informations sur ce pass en suivant <a href="http://9ogu.mjt.lu/lnk/CAAAAmTDWgQAAAAAAAAAAR4qWN8AALQJix0AAAAAAAwbTwBhvFGqf8uNRHzDQLe3vSX6eKsIYwAMJnY/3/zcOSDpgl2hZ2FQRqCtiyFQ/aHR0cHM6Ly93d3cudGhlZ2FtZS1mcmFuY2UuY29tL2ZyL2NvdmlkLTE5Lmh0bQ">""", "Covid 19 - Mesures Sanitaires")
+        Field("pas", """En plus de ces mesures, la présentation du Pass Sanitaire est obligatoire pour les joueurs de 12 ans et plus. Nous vous invitons à privilégier ce pass sous format numérique via l'application Tous Anti Covid afin d'éviter tout problème à la lecture du QR code. Retrouvez toutes nos informations sur ce pass en suivant <a href="http://9ogu.mjt.lu/lnk/CAAAAmTDWgQAAAAAAAAAAR4qWN8AALQJix0AAAAAAAwbTwBhvFGqf8uNRHzDQLe3vSX6eKsIYwAMJnY/3/zcOSDpgl2hZ2FQRqCtiyFQ/aHR0cHM6Ly93d3cudGhlZ2FtZS1mcmFuY2UuY29tL2ZyL2NvdmlkLTE5Lmh0bQ">ce lien</a>""", "Covid 19 - Mesures Sanitaires")
     )
     organizationName = "The Game"
     passTypeIdentifier = "pass.com.sear.app"
