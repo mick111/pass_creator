@@ -49,7 +49,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     field = DateField(
         "boa",
         EMBARQUEMENT.isoformat(),
-        "Boarding",
+        "Embarquement",
         dateStyle=DateStyle.NONE,
         timeStyle=DateStyle.SHORT,
     )
@@ -64,7 +64,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     cardInfo.secondaryFields.append(field)
     
     cardInfo.backFields.append(
-        Field("vid", """Une vidéo d'instructions est consultable<a href="http://9ogu.mjt.lu/lnk/EAAAAiBEcpQAAAAAAAAAAR4qWN8AALQJix0AAAAAAAwbTwBhSs829ezekZWBSeO6pIQnHHNxRAAMJnY/2/nkoaOE6dKkZG6NAj65d89g/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj0yRXVCaHR6TVFMVQ">ici</a>""", "Présentation"))
+        Field("vid", """Une vidéo d'instructions est consultable <a href="http://9ogu.mjt.lu/lnk/EAAAAiBEcpQAAAAAAAAAAR4qWN8AALQJix0AAAAAAAwbTwBhSs829ezekZWBSeO6pIQnHHNxRAAMJnY/2/nkoaOE6dKkZG6NAj65d89g/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj0yRXVCaHR6TVFMVQ">ici</a>""", "Présentation"))
     
     cardInfo.backFields.append(
         Field(
