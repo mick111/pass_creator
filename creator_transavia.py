@@ -77,7 +77,7 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     cardInfo.backFields.append(
         Field(
             "svc",
-            """TheGame Airlines vous propose toute une gamme de rafraîchissements dès votre arrivée dans notre terminal d'embarquement. Jus d'orange, thé glacé et café... à volonté pour votre plus grand confort. Retrouvez également notre Magazine pour faire passer le temps durant votre vol...""", 
+            """The Game Airlines vous propose toute une gamme de rafraîchissements dès votre arrivée dans notre terminal d'embarquement. Jus d'orange, thé glacé et café... à volonté pour votre plus grand confort. Retrouvez également notre Magazine pour faire passer le temps durant votre vol...""", 
             "Nos services à bord",
         )
     )
