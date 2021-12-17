@@ -31,14 +31,14 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     cardInfo.primaryFields.append(field)
 
     cardInfo.auxiliaryFields.append(
-        Field("nam", NOM_PRENOM, "Passenger")
+        Field("nam", NOM_PRENOM, "Passager")
     )
 
     field = Field("ter", TERMINAL, "Terminal")
     field.textAlignment = Alignment.CENTER
     cardInfo.auxiliaryFields.append(field)
 
-    field = Field("sea", SEAT, "Seat")
+    field = Field("sea", SEAT, "Siège")
     field.textAlignment = Alignment.CENTER
     cardInfo.auxiliaryFields.append(field)
 
@@ -55,22 +55,10 @@ def TRANSAVIA_PASS(dest, FROM, TO, EMBARQUEMENT, NOM_PRENOM, TERMINAL, FLIGHT, S
     )
     cardInfo.secondaryFields.append(field)
 
-    field = DateField(
-        "gat",
-        (EMBARQUEMENT + datetime.timedelta(minutes=15)).isoformat(),
-        "Gate closed",
-        dateStyle=DateStyle.NONE,
-        timeStyle=DateStyle.SHORT,
-    )
-    field.textAlignment = Alignment.CENTER
-    cardInfo.secondaryFields.append(field)
-
-    field = DateField(
-        "dep",
-        (EMBARQUEMENT + datetime.timedelta(minutes=30)).isoformat(),
-        "Departure",
-        dateStyle=DateStyle.NONE,
-        timeStyle=DateStyle.SHORT,
+    field = Field(
+        "dur",
+        "1:00",
+        "Durée de vol",
     )
     field.textAlignment = Alignment.RIGHT
     cardInfo.secondaryFields.append(field)
